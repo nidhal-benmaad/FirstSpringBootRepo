@@ -28,7 +28,7 @@ public class ContratService implements IcontratService {
     }
 
     @Override
-    public void deleteContrat(Long id) {
+    public void deleteContratById(Long id) {
         cRepo.deleteById(id);
     }
 
@@ -40,5 +40,10 @@ public class ContratService implements IcontratService {
     @Override
     public Contrat findContratById(Long id) {
         return cRepo.findById(id).get();
+    }
+
+    @Override
+    public List<Contrat> findContratByArchive(boolean arch) {
+        return cRepo.getByArchive(arch);
     }
 }

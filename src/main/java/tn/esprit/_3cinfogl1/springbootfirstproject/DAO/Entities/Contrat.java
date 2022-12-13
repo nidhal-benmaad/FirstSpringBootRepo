@@ -25,11 +25,11 @@ public class Contrat implements Serializable {
     private long idContrat;
 
     @Temporal(TemporalType.DATE)
-    private Date    dateDebutC;
+    private Date dateDebutC;
     @Temporal(TemporalType.DATE)
-    private Date    dateFinC;
+    private Date dateFinC;
 
-    @Enumerated (EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Specialite specialite;
 
     private boolean archive;
@@ -40,12 +40,6 @@ public class Contrat implements Serializable {
 
     @ManyToOne
     Etudiant etudiant;
-
-
-
-
-
-
 
 
 }
